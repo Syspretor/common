@@ -23,8 +23,8 @@ import (
 	"strconv"
 	"strings"
 
-	utilcontainermeta "github.com/fluid-cloudnative/common/pkg/workload/utils/containermeta"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	utilcontainermeta "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/containermeta"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	"gomodules.xyz/jsonpatch/v2"
 	apps "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
@@ -34,7 +34,7 @@ import (
 	"k8s.io/klog/v2"
 	hashutil "k8s.io/kubernetes/pkg/util/hash"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 func SetOptionsDefaults(opts *UpdateOptions) *UpdateOptions {

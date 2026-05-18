@@ -19,13 +19,13 @@ package podreadiness
 import (
 	"encoding/json"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/podadapter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/podadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/util/retry"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 func addNotReadyKey(adp podadapter.Adapter, pod *v1.Pod, msg Message, condType v1.PodConditionType) error {

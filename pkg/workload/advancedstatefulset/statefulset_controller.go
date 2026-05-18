@@ -24,16 +24,16 @@ import (
 	"fmt"
 	"time"
 
-	history "github.com/fluid-cloudnative/common/pkg/workload/utils/controllerhistory"
-	utildiscovery "github.com/fluid-cloudnative/common/pkg/workload/utils/discovery"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/expectations"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/inplaceupdate"
-	kubecontroller2 "github.com/fluid-cloudnative/common/pkg/workload/utils/kubecontroller"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/lifecycle"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/ratelimiter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/requeueduration"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/revisionadapter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	history "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/controllerhistory"
+	utildiscovery "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/discovery"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/expectations"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/inplaceupdate"
+	kubecontroller2 "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/kubecontroller"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/lifecycle"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/ratelimiter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/requeueduration"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/revisionadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	appsv1 "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -59,7 +59,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 func init() {

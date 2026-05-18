@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/revisionadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/revisionadapter"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
 )

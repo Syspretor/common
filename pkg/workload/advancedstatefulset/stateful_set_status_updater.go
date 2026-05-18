@@ -25,7 +25,7 @@ import (
 	"k8s.io/client-go/util/retry"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 // StatusUpdaterInterface is an interface used to update the AdvancedStatefulSetStatus associated with a AdvancedStatefulSet.

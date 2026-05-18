@@ -18,11 +18,11 @@ limitations under the License.
 package advancedstatefulset
 
 import (
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/revision"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/updatesort"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/revision"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/updatesort"
 	v1 "k8s.io/api/core/v1"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 func sortPodsToUpdate(rollingUpdateStrategy *workloadv1alpha1.RollingUpdateStatefulSetStrategy, updateRevision string, totalReplicas int32, replicas []*v1.Pod) []int {

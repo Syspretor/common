@@ -1,7 +1,7 @@
-# Common Workload Controller Makefile
+# Advanced StatefulSet Makefile
 
 # Variables
-PROJECT_NAME := common
+PROJECT_NAME := advanced-statefulset
 API_DIR := api
 PKG_DIR := pkg/workload
 CONFIG_DIR := config
@@ -22,8 +22,7 @@ all: manifests build
 # Build all packages
 .PHONY: build
 build:
-	cd $(API_DIR) && $(GOBUILD) ./...
-	cd $(PKG_DIR) && $(GOBUILD) ./...
+	$(GOBUILD) ./...
 
 # Generate manifests (CRDs and RBAC)
 .PHONY: manifests
@@ -42,9 +41,12 @@ endif
 # Download dependencies
 .PHONY: tidy
 tidy:
-	cd $(API_DIR) && $(GOMOD) tidy
-	cd $(PKG_DIR) && $(GOMOD) tidy
 	$(GOMOD) tidy
+
+# Vendor dependencies
+.PHONY: vendor
+vendor:
+	$(GOMOD) vendor
 
 # Clean generated files
 .PHONY: clean
@@ -65,7 +67,8 @@ help:
 	@echo "  build        - Build all packages"
 	@echo "  manifests    - Generate CRDs and RBAC configurations"
 	@echo "  controller-gen - Install controller-gen tool"
-	@echo "  tidy         - Download and tidy Go dependencies"
+	@echo "  tidy         - Tidy Go dependencies"
+	@echo "  vendor       - Vendor Go dependencies"
 	@echo "  clean        - Remove generated files"
 	@echo "  run-example  - Run the example application"
 	@echo "  help         - Show this help message"

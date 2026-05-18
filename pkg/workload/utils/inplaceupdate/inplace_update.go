@@ -23,9 +23,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/podadapter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/revisionadapter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/podadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/revisionadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	apps "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -36,7 +36,7 @@ import (
 	"k8s.io/utils/clock"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 var (

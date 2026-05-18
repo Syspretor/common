@@ -1,6 +1,6 @@
-# common
+# advanced-statefulset
 
-A shared library for Fluid workload controllers, providing AdvancedStatefulSet and utility packages for writing Kubernetes controllers.
+AdvancedStatefulSet controller and utility packages for Fluid, providing enhanced StatefulSet capabilities for Kubernetes.
 
 ## Feature
 
@@ -18,7 +18,7 @@ package main
 import (
     "sigs.k8s.io/controller-runtime/pkg/manager"
     
-    "github.com/fluid-cloudnative/common/pkg/workload/advancedstatefulset"
+    "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/advancedstatefulset"
 )
 
 func main() {
@@ -52,7 +52,7 @@ import (
     metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
     "sigs.k8s.io/controller-runtime/pkg/client"
     
-    workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+    workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 func createAdvancedStatefulSet(c client.Client) error {
@@ -233,7 +233,7 @@ readinessProbe:
 ### As a Dependency
 
 ```bash
-go get github.com/fluid-cloudnative/common/pkg/workload
+go get github.com/fluid-cloudnative/advanced-statefulset/pkg/workload
 ```
 
 ### Import
@@ -241,14 +241,14 @@ go get github.com/fluid-cloudnative/common/pkg/workload
 ```go
 import (
     // API types
-    workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+    workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
     
     // Controller
-    "github.com/fluid-cloudnative/common/pkg/workload/advancedstatefulset"
+    "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/advancedstatefulset"
     
     // Utilities
-    "github.com/fluid-cloudnative/common/pkg/workload/utils/inplaceupdate"
-    "github.com/fluid-cloudnative/common/pkg/workload/utils/lifecycle"
+    "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/inplaceupdate"
+    "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/lifecycle"
 )
 ```
 

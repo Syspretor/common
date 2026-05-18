@@ -23,8 +23,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/fluid-cloudnative/common/api/workload/v1alpha1"
-	"github.com/fluid-cloudnative/common/pkg/workload/advancedstatefulset"
+	"github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/advancedstatefulset"
 	apps "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"

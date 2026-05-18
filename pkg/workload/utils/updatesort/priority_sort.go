@@ -20,11 +20,11 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 type prioritySort struct {

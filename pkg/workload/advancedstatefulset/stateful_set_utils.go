@@ -27,11 +27,11 @@ import (
 	"strconv"
 	"time"
 
-	apiutil "github.com/fluid-cloudnative/common/pkg/workload/utils/api"
-	history "github.com/fluid-cloudnative/common/pkg/workload/utils/controllerhistory"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/kubecontroller"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/lifecycle"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/revision"
+	apiutil "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/api"
+	history "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/controllerhistory"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/kubecontroller"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/lifecycle"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/revision"
 	apps "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -41,7 +41,7 @@ import (
 	"k8s.io/klog/v2"
 	podutil "k8s.io/kubernetes/pkg/api/v1/pod"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 var patchCodec = workloadv1alpha1.Codecs.LegacyCodec(workloadv1alpha1.SchemeGroupVersion)

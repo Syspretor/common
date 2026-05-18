@@ -21,8 +21,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/podadapter"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/podreadiness"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/podadapter"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/podreadiness"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	coreinformers "k8s.io/client-go/informers/core/v1"
@@ -31,7 +31,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 const (

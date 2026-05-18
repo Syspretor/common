@@ -28,7 +28,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/kubecontroller"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/kubecontroller"
 	apps "k8s.io/api/apps/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/api/errors"

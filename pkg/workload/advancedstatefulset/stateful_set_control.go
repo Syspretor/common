@@ -26,11 +26,11 @@ import (
 	"sync"
 	"time"
 
-	history "github.com/fluid-cloudnative/common/pkg/workload/utils/controllerhistory"
-	inplaceupdate2 "github.com/fluid-cloudnative/common/pkg/workload/utils/inplaceupdate"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/lifecycle"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/specifieddelete"
-	"github.com/fluid-cloudnative/common/pkg/workload/utils/util"
+	history "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/controllerhistory"
+	inplaceupdate2 "github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/inplaceupdate"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/lifecycle"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/specifieddelete"
+	"github.com/fluid-cloudnative/advanced-statefulset/pkg/workload/utils/util"
 	apps "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
@@ -41,7 +41,7 @@ import (
 	"k8s.io/utils/integer"
 	"k8s.io/utils/ptr"
 
-	workloadv1alpha1 "github.com/fluid-cloudnative/common/api/workload/v1alpha1"
+	workloadv1alpha1 "github.com/fluid-cloudnative/advanced-statefulset/api/workload/v1alpha1"
 )
 
 // Realistic value for maximum in-flight requests when processing in parallel mode.
